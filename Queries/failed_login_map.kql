@@ -1,0 +1,4 @@
+// This query detects failed logins RDP (remote desktop protocol) logins by IP
+SecurityEvents
+| where EventID == 4625
+| project TimeGenrated, Account, Conputer, EvenID, Activity, IPAddress
